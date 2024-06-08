@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebSehat</title>
-  <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
   <style>
-    /* Custom styles */
     .jumbotron {
       background-image: url('background.jpg');
       background-color: rgb(33, 132, 0);
@@ -26,7 +23,7 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">AyoHidupSehat</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +48,7 @@
     </div>
   </nav>
 
-  <!-- Jumbotron -->
+
   <div class="jumbotron">
     <h1 class="display-4">SaladGenZ</h1>
     <img src="./assets/SaladGenZ.jpg" alt="Product" class="product-image">
@@ -59,14 +56,13 @@
     <a class="btn btn-primary btn-lg" href="#pesan-sekarang" role="button">Beli Sekarang</a>
   </div>
 
-  <!-- Pesan Sekarang Section -->
+
   <section id="pesan-sekarang" class="bg-light py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2 text-center">
           <h2>Pesan Sekarang</h2>
           <p>Isi formulir di bawah ini untuk memesan produk kami.</p>
-          <!-- Formulir -->
           <form id="pesanForm" action="proses_formulir.php" method="POST">
             <div class="form-group">
               <label for="nama">Nama</label>
@@ -86,32 +82,29 @@
               </div>
             <button type="submit" class="btn btn-primary btn-lg">Pesan</button>
           </form>
-          <!-- Elemen untuk menampilkan pesan -->
           <div id="pesanContainer"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+
   <footer class="footer mt-auto py-3 bg-light">
     <div class="container text-center">
       <span class="text-muted">SalamSehat &copy; 2024</span>
     </div>
   </footer>
 
-  <!-- Bootstrap JS, Popper.js, and jQuery -->
+ 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <!-- Custom JavaScript -->
+
   <script>
-    // Script untuk menampilkan pesan setelah formulir dikirim
     document.getElementById('pesanForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah pengiriman formulir standar
+      event.preventDefault(); 
       alert('Terima kasih! Pesan Anda telah berhasil dikirim.');
-      // Menampilkan pesan pada halaman web
       document.getElementById('pesanContainer').innerHTML = '<div class="alert alert-success" role="alert">Terima kasih! Pesan Anda telah berhasil dikirim.</div>';
     });
   </script>
